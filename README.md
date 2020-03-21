@@ -2,11 +2,11 @@
 
 `pyawabi` is a python warapper for awabi(https://github.com/nakagami/awabi).
 
-## How to build module
+## How to build and use module
 
 It needs nightly Rust becauese using PyO3 https://github.com/PyO3/pyo3 .
 
-And cargo build and copy `libpyawabi.so` to somewhere python path as pyawabi.so .
+Let's cargo build and copy `libpyawabi.so` to somewhere python path as pyawabi.so .
 ```
 $ git clone https://github.com/nakagami/pyawabi.git
 $ cd pyawabi
