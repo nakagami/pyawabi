@@ -20,6 +20,8 @@ install_requires = []
 setup(
     name="pyawabi",
     version="0.2.0",
+    description='A morphological analyzer using mecab dictionary.',
+    url='http://github.com/nakagami/pyawabi/',
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Development Status :: 3 - Alpha",
@@ -28,6 +30,10 @@ setup(
         "Programming Language :: Rust",
         "Operating System :: POSIX",
     ],
+    keywords=['MeCab'],
+    license='MIT',
+    author='Hajime Nakagami',
+    author_email='nakagami@gmail.com',
     packages=["pyawabi"],
     rust_extensions=[RustExtension("pyawabi.awabi")],
     setup_requires=setup_requires,
