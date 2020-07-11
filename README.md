@@ -2,26 +2,25 @@
 
 `pyawabi` is a python warapper for awabi(https://github.com/nakagami/awabi).
 
-## How to build and use module
+## Requirements
 
-It needs nightly Rust becauese using PyO3 https://github.com/PyO3/pyo3 .
+- Rust https://www.rust-lang.org/learn/get-started
+- setuptools-rust https://pypi.org/project/setuptools-rust/
+- MeCab dictionary https://github.com/nakagami/awabi#requirements-and-how-to-install
 
-Let's cargo build and copy `libpyawabi.so` to somewhere python path as pyawabi.so .
+## Install
+
 ```
-$ git clone https://github.com/nakagami/pyawabi.git
-$ cd pyawabi
-$ cargo build --release
-$ cd target/release
-$ cp libawabi.so /some/where/python-project/awabi.so
+$ pip install pyawabi
 ```
 
 ## Example
 
 ```
->>> import awabi
+>>> import pyawabi
 >>> import pprint
 >>> pp = pprint.PrettyPrinter()
->>> pp.pprint(awabi.tokenize("すもももももももものうち"))
+>>> pp.pprint(pyawabi.awabi.tokenize("すもももももももものうち"))
 [('すもも', '名詞,一般,*,*,*,*,すもも,スモモ,スモモ'),
  ('も', '助詞,係助詞,*,*,*,*,も,モ,モ'),
  ('もも', '名詞,一般,*,*,*,*,もも,モモ,モモ'),
