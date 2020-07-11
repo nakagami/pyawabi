@@ -12,16 +12,16 @@ $ git clone https://github.com/nakagami/pyawabi.git
 $ cd pyawabi
 $ cargo build --release
 $ cd target/release
-$ cp libpyawabi.so /some/where/python-project/pyawabi.so
+$ cp libawabi.so /some/where/python-project/awabi.so
 ```
 
 ## Example
 
 ```
->>> import pyawabi
+>>> import awabi
 >>> import pprint
 >>> pp = pprint.PrettyPrinter()
->>> pp.pprint(pyawabi.tokenize("すもももももももものうち"))
+>>> pp.pprint(awabi.tokenize("すもももももももものうち"))
 [('すもも', '名詞,一般,*,*,*,*,すもも,スモモ,スモモ'),
  ('も', '助詞,係助詞,*,*,*,*,も,モ,モ'),
  ('もも', '名詞,一般,*,*,*,*,もも,モモ,モモ'),

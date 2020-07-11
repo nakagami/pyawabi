@@ -38,7 +38,7 @@ fn tokenize_n_best(s: String, n: u32) -> PyResult<Vec<Vec<(String, String)>>> {
 }
 
 #[pymodule]
-fn pyawabi(_py: Python, m: &PyModule) -> PyResult<()> {
+fn awabi(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(tokenize))?;
     m.add_wrapped(wrap_pyfunction!(tokenize_n_best))?;
     Ok(())
