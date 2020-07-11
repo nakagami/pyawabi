@@ -19,8 +19,10 @@ install_requires = []
 
 setup(
     name="pyawabi",
-    version="0.2.0",
+    version="0.2.1",
     description='A morphological analyzer using mecab dictionary.',
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     url='http://github.com/nakagami/pyawabi/',
     classifiers=[
         "License :: OSI Approved :: MIT License",
