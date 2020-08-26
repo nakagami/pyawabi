@@ -26,7 +26,7 @@ setup(
     url='http://github.com/nakagami/pyawabi/',
     classifiers=[
         "License :: OSI Approved :: MIT License",
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Programming Language :: Python",
         "Programming Language :: Rust",
