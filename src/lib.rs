@@ -26,20 +26,44 @@ use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;
 
 #[pyfunction]
-fn tokenize(s: String) -> PyResult<Vec<(String, String)>> {
+fn tokenize(s: &str) -> PyResult<Vec<(String, String)>> {
     let tokenizer = tokenizer::Tokenizer::new(None).unwrap();
     Ok(tokenizer.tokenize(&s))
 }
 
 #[pyfunction]
-fn tokenize_n_best(s: String, n: u32) -> PyResult<Vec<Vec<(String, String)>>> {
+fn tokenize_n_best(s: &str, n: u32) -> PyResult<Vec<Vec<(String, String)>>> {
     let tokenizer = tokenizer::Tokenizer::new(None).unwrap();
     Ok(tokenizer.tokenize_n_best(&s, n))
+}
+
+#[pyclass]
+struct Tokenizer {
+    inner: tokenizer::Tokenizer,
+}
+
+#[pymethods]
+impl Tokenizer {
+    #[new]
+    fn new(mecabrc_path: Option<String>) -> Self {
+        Tokenizer {
+            inner: tokenizer::Tokenizer::new(mecabrc_path).unwrap(),
+        }
+    }
+
+    pub fn tokenize(&self, s: &str) -> PyResult<Vec<(String, String)>> {
+        Ok(self.inner.tokenize(s))
+    }
+
+    fn tokenize_n_best(&self, s: &str, n: u32) -> PyResult<Vec<Vec<(String, String)>>> {
+        Ok(self.inner.tokenize_n_best(s, n))
+    }
 }
 
 #[pymodule]
 fn awabi(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(tokenize))?;
     m.add_wrapped(wrap_pyfunction!(tokenize_n_best))?;
+    m.add_class::<Tokenizer>()?;
     Ok(())
 }
