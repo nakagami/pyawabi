@@ -37,6 +37,7 @@ setup(
     author='Hajime Nakagami',
     author_email='nakagami@gmail.com',
     packages=["pyawabi"],
+    scripts=['bin/pyawabi'],
     rust_extensions=[RustExtension("pyawabi.awabi")],
     setup_requires=setup_requires,
     zip_safe=False,
