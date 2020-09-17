@@ -19,7 +19,7 @@ install_requires = []
 
 setup(
     name="pyawabi",
-    version="0.2.2",
+    version="0.2.3",
     description='A morphological analyzer using mecab dictionary.',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
