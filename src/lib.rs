@@ -28,13 +28,13 @@ use pyo3::wrap_pyfunction;
 #[pyfunction]
 fn tokenize(s: &str) -> PyResult<Vec<(String, String)>> {
     let tokenizer = tokenizer::Tokenizer::new(None).unwrap();
-    Ok(tokenizer.tokenize(&s))
+    Ok(tokenizer.tokenize(s))
 }
 
 #[pyfunction]
 fn tokenize_n_best(s: &str, n: u32) -> PyResult<Vec<Vec<(String, String)>>> {
     let tokenizer = tokenizer::Tokenizer::new(None).unwrap();
-    Ok(tokenizer.tokenize_n_best(&s, n))
+    Ok(tokenizer.tokenize_n_best(s, n))
 }
 
 #[pyclass]
