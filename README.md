@@ -4,6 +4,7 @@
 
 ## Requirements
 
+- python3.6+
 - Rust https://www.rust-lang.org/learn/get-started
 - python3-dev packages https://github.com/PyO3/pyo3#usage
 - setuptools-rust https://pypi.org/project/setuptools-rust/
