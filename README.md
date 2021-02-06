@@ -12,7 +12,6 @@
 ## Install
 
 ```
-$ pip install setuptools-rust
 $ pip install pyawabi
 ```
 
