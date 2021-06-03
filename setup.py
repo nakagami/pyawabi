@@ -45,4 +45,5 @@ setup(
     rust_extensions=[RustExtension("pyawabi.awabi")],
     setup_requires=setup_requires,
     zip_safe=False,
+    test_suiete="tests",
 )
