@@ -18,5 +18,4 @@ version = "0.13"
 features = ["extension-module"]
 
 [lib]
-name = "awabi"
 crate-type = ["cdylib"]
