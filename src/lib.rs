@@ -21,9 +21,8 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 */
-use awabi::tokenizer;
+use ::awabi::tokenizer;
 use pyo3::prelude::*;
-use pyo3::wrap_pyfunction;
 
 #[pyfunction]
 fn tokenize(s: &str) -> PyResult<Vec<(String, String)>> {
@@ -61,9 +60,9 @@ impl Tokenizer {
 }
 
 #[pymodule]
-fn awabi(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_wrapped(wrap_pyfunction!(tokenize))?;
-    m.add_wrapped(wrap_pyfunction!(tokenize_n_best))?;
+fn awabi(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(tokenize, m)?)?;
+    m.add_function(wrap_pyfunction!(tokenize_n_best, m)?)?;
     m.add_class::<Tokenizer>()?;
     Ok(())
 }

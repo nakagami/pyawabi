@@ -1,18 +1,6 @@
-import sys
-
 from setuptools import setup
 
-try:
-    from setuptools_rust import RustExtension
-except ImportError:
-    import subprocess
-
-    errno = subprocess.call([sys.executable, "-m", "pip", "install", "setuptools-rust==0.11.6"])
-    if errno:
-        print("Please install setuptools-rust package")
-        raise SystemExit(errno)
-    else:
-        from setuptools_rust import RustExtension
+from setuptools_rust import RustExtension
 
 setup_requires = ["setuptools-rust>=0.11", "wheel"]
 install_requires = []
@@ -25,7 +13,6 @@ setup(
     long_description_content_type="text/markdown",
     url='http://github.com/nakagami/pyawabi/',
     classifiers=[
-        "License :: OSI Approved :: MIT License",
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Programming Language :: Python",
