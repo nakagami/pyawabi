@@ -2,8 +2,6 @@ from setuptools import setup
 
 from setuptools_rust import RustExtension
 
-setup_requires = ["setuptools-rust>=1.11", "wheel"]
-install_requires = []
 
 setup(
     name="pyawabi",
@@ -30,7 +28,6 @@ setup(
     packages=["pyawabi"],
     scripts=['bin/pyawabi'],
     rust_extensions=[RustExtension("pyawabi.awabi")],
-    setup_requires=setup_requires,
     zip_safe=False,
     test_suiete="tests",
 )
