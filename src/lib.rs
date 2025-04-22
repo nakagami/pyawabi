@@ -44,7 +44,7 @@ struct Tokenizer {
 #[pymethods]
 impl Tokenizer {
     #[new]
-    fn new(mecabrc_path: Option<String>) -> Self {
+    fn new(mecabrc_path: Option<&str>) -> Self {
         Tokenizer {
             inner: tokenizer::Tokenizer::new(mecabrc_path).unwrap(),
         }
