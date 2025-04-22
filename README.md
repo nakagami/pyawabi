@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- python3.6+
+- python3.10+
 - Rust https://www.rust-lang.org/learn/get-started
 - python3-dev packages https://github.com/PyO3/pyo3#usage
 - MeCab dictionary https://github.com/nakagami/awabi#requirements-and-how-to-install
