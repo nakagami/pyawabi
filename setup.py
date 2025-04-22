@@ -2,12 +2,12 @@ from setuptools import setup
 
 from setuptools_rust import RustExtension
 
-setup_requires = ["setuptools-rust>=0.11", "wheel"]
+setup_requires = ["setuptools-rust>=1.11", "wheel"]
 install_requires = []
 
 setup(
     name="pyawabi",
-    version="0.2.6",
+    version="0.3.0",
     description='A morphological analyzer using mecab dictionary.',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type="text/markdown",
