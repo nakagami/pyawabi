@@ -10,7 +10,6 @@ readme = "README.md"
 authors = [
     {name = "Hajime Nakagami", email = "nakagami@gmail.com"},
 ]
-license = {text = "MIT"}
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
