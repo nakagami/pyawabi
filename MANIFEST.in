@@ -1,2 +1,2 @@
-include Cargo.toml
-recursive-include src *
+include Cargo.toml Cargo.lock README.md LICENSE
+recursive-include pyawabi src bin
