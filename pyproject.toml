@@ -23,6 +23,9 @@ keywords = ["mecab", "awabi"]
 [project.urls]
 Homepage = "https://github.com/nakagami/pyawabi"
 
+[project.scripts]
+pyawabi = "pyawabi.main:main"
+
 [tool.maturin]
 module-name = "pyawabi.awabi"
 exclude = ["Cargo.lock", ".gitignore", ".github/workflows/test.yml"]
