@@ -25,3 +25,4 @@ Homepage = "https://github.com/nakagami/pyawabi"
 
 [tool.maturin]
 module-name = "pyawabi.awabi"
+exclude = ["Cargo.lock", ".gitignore", ".github/workflows/test.yml"]
